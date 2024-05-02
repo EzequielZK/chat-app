@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function LoginComponent() {
   return (
     <div className='text-background p-8 bg-primary h-full w-1/3 flex flex-col items-center justify-center gap-6'>
@@ -15,7 +17,9 @@ export default function LoginComponent() {
         <input name='password' />
         <span className='text-xs self-end'>Esqueci minha senha</span>
       </div>
-      <button>Entrar</button>
+      <Link href='/chat'>
+        <button>Entrar</button>
+      </Link>
       <span className='text-xs'>Não possui cadastro ? Cadastre-se</span>
     </div>
   );
