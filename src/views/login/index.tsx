@@ -5,7 +5,7 @@ export default function LoginView() {
     <div className='flex items-center w-full h-full'>
       <div className='p-8 w-2/3 h-full flex flex-col justify-center bg-background gap-4'>
         <p className='text-6xl text-primary'>ChatApp</p>
-        <p>
+        <p className='text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
           ullamcorper magna sapien, eu pharetra augue viverra sit amet.
           Suspendisse iaculis est ante, ut consequat dui aliquet quis. Integer
