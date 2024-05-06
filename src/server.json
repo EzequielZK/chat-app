@@ -1,0 +1,34 @@
+{
+    "message": "",
+    "data": {
+        "chats":[
+            {
+                "date": "2024-05-05T01:00",
+                "chat": [
+                    {
+                        "ownerId": "me",
+                        "message": "Teste eu sou o usuário logado"
+                    },
+                    {
+                        "ownerId": "other",
+                        "message": "Teste eu sou o outro manooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+                    }
+                ]
+            },
+            {
+                "date": "2024-05-05T01:00",
+                "chat": [
+                    {
+                        "ownerId": "me",
+                        "message": "Teste eu sou o usuário logado"
+                    },
+                    {
+                        "ownerId": "other",
+                        "message": "Teste eu sou o outro mano"
+                    }
+                ]
+            }
+        ]
+
+    }
+}

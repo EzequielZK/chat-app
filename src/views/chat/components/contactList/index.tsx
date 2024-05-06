@@ -1,5 +1,6 @@
 import { EllipsisVertical, Search } from 'lucide-react';
 import ContactButton from './ContactButton';
+import { Input } from '@/components/ui/input';
 
 export default function ContactList() {
   return (
@@ -12,9 +13,9 @@ export default function ContactList() {
         </div>
         <EllipsisVertical />
       </div>
-      <div className='flex gap-2 items-center bg-input rounded-lg border p-2'>
+      <div className='flex gap-2 items-center rounded-lg border border-input p-2'>
         <Search />
-        <input className='w-full bg-input text-xs' placeholder='Search for contact' />
+        <Input className='w-full border-none shadow-none' placeholder='Search for contact' />
       </div>
       <div className='w-full h-px bg-white' />
       <div className='flex flex-col gap-4 w-full'>
