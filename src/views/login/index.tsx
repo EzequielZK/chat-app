@@ -1,6 +1,24 @@
+'use client';
+
+import { useState } from 'react';
 import LoginComponent from './components/Login';
+import RegisterComponent from './components/Register';
+import { ScreenType } from './types';
 
 export default function LoginView() {
+  const [screen, setScreen] = useState<ScreenType>('login');
+
+  const handleScreen = (screen: ScreenType) => {
+    setScreen(screen);
+  };
+
+  const screens = {
+    login: <LoginComponent handleScreen={handleScreen} />,
+    register: <RegisterComponent handleScreen={handleScreen} />,
+  };
+
+  const selectedScreen = screens[screen];
+
   return (
     <div className='flex items-center w-full h-full'>
       <div className='p-8 w-2/3 h-full flex flex-col justify-center bg-background gap-4'>
@@ -18,7 +36,9 @@ export default function LoginView() {
           dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
-      <LoginComponent />
+      <div className='text-primary-foreground p-8 bg-primary h-full w-1/3 flex flex-col items-center justify-center gap-6 shadow-md'>
+        {selectedScreen}
+      </div>
     </div>
   );
 }

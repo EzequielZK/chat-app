@@ -1,35 +1,49 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
+import { LoginProps } from '../types';
 
-export default function LoginComponent() {
+export default function LoginComponent({ handleScreen }: LoginProps) {
   return (
-    <div className='text-foreground p-8 bg-card h-full w-1/3 flex flex-col items-center justify-center gap-6 shadow-md'>
+    <>
       <span className='text-4xl'>ChatApp</span>
       <div className='flex flex-col'>
         <label className='text-xs font-bold' htmlFor='login'>
           Login
         </label>
-        <Input name='login' />
+        <Input
+          name='login'
+          className='border-none bg-primary-foreground text-secondary-foreground'
+        />
       </div>
       <div className='flex flex-col'>
         <label className='text-xs font-bold' htmlFor='password'>
           Senha
         </label>
-        <Input name='password'/>
-        <Button className='text-xs self-end p-0' variant='link'>
+        <Input
+          className='border-none bg-primary-foreground text-secondary-foreground'
+          name='password'
+        />
+        <Button
+          className='text-xs self-end p-0 text-primary-foreground'
+          variant='link'
+        >
           Esqueci minha senha
         </Button>
       </div>
       <Link href='/chat'>
-        <Button >Entrar</Button>
+        <Button variant='secondary'>Entrar</Button>
       </Link>
       <div className='flex items-center gap-1'>
         <span className='text-xs'>Não possui cadastro ?</span>
-        <Button variant='link' className='p-0'>
+        <Button
+          onClick={() => handleScreen('register')}
+          variant='link'
+          className='p-0 text-primary-foreground text-xs'
+        >
           Cadastre-se
         </Button>
       </div>
-    </div>
+    </>
   );
 }
