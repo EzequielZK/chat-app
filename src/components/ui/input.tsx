@@ -1,14 +1,13 @@
-import * as React from 'react';
+import { useState, InputHTMLAttributes, forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 import { Eye, EyeOff } from 'lucide-react';
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
-    const [visible, setVisible] = React.useState(false);
+    const [visible, setVisible] = useState(false);
 
     const changeVisibility = () => {
       setVisible(!visible);
