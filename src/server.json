@@ -3,26 +3,32 @@
     "data": {
         "chats":[
             {
+                "id": 1,
                 "date": "2024-05-05T01:00",
                 "chat": [
                     {
+                        "id": 1,
                         "ownerId": "me",
                         "message": "Teste eu sou o usuário logado"
                     },
                     {
+                        "id": 2,
                         "ownerId": "other",
                         "message": "Teste eu sou o outro manooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
                     }
                 ]
             },
             {
+                "id": 2,
                 "date": "2024-05-05T01:00",
                 "chat": [
                     {
+                        "id": 1,
                         "ownerId": "me",
                         "message": "Teste eu sou o usuário logado"
                     },
                     {
+                        "id": 2,
                         "ownerId": "other",
                         "message": "Teste eu sou o outro mano"
                     }

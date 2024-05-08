@@ -28,12 +28,12 @@ export default function Conversation() {
       </div>
       <div className='flex flex-col flex-1 justify-end'>
         {conversation.data.chats.map(chat => (
-          <div className='flex flex-col'>
+          <div key={chat.id} className='flex flex-col'>
             <div className='self-center p-2'>
               {new Date(chat.date).toDateString()}
             </div>
             {chat.chat.map(message => (
-              <div className='flex flex-col flex-1 justify-end p-4'>
+              <div key={message.id} className='flex flex-col flex-1 justify-end p-4'>
                 <div
                   className={`p-4 rounded-lg ${
                     messageConfig[message.ownerId as keyof typeof messageConfig]
