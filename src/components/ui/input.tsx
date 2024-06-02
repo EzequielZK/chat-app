@@ -25,13 +25,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
         {type === 'password' && (
           <button
-            className={`absolute right-0 inset-y-0 pr-3 ${
+            className={`absolute right-0 inset-y-0 p-2 mr-2 ${
               type === 'password' ? '' : 'hidden'
-            }`}
+            }rounded-full active:outline-none active:bg-zinc-200 focus:outline-none `}
             type='button'
             onClick={changeVisibility}
           >
-            {visible ? <Eye /> : <EyeOff />}
+            {visible ? (
+              <Eye className='w-5 h-5' />
+            ) : (
+              <EyeOff className='w-5 h-5' />
+            )}
           </button>
         )}
       </div>

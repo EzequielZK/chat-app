@@ -9,7 +9,6 @@ export type RegisterProps = ComponentProps & {};
 
 export type RegisterBody = {
   name: string;
-  image?: string;
   email: string;
   password: string;
   confirmPassword: string;
